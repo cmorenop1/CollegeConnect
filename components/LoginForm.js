@@ -42,7 +42,7 @@ const LoginForm = () => {
         //         alert('probably the backend is down')
         //         console.log(error)
         //     })
-        router.push('/home')
+        router.push('/lobby')
     }
 
     return (
