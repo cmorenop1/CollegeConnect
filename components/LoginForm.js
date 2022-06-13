@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/LoginForm.module.css'
-import axios from 'axios';
 
 const LoginForm = () => {
 
@@ -29,29 +28,38 @@ const LoginForm = () => {
     }
 
     const onClick = () => {
-        // const url = 'http://10.0.0.24:3001/users'
-        // axios
-        //     .post(url, form)
-        //     .then((res) => {
-        //         if (res.status === 201) {
-        //             localStorage.setItem('username', form.username)
-        //             router('/home')
-        //         }
-        //     })
-        //     .catch((error) => {
-        //         alert('probably the backend is down')
-        //         console.log(error)
-        //     })
+        console.log(setForm)
         router.push('/lobby')
     }
 
     return (
         <div className={styles.loginform}>
-            <img src='collegeconnect.jpg' className={styles.logo} />
-            <input type="text" name="username" placeholder='user' onChange={onChange} ref={usernameRef} className={styles.inputform}/>
-            <input type="password" name="password" placeholder='password' onChange={onChange} ref={passwordRef} className={styles.inputform} />
+            <img class="scale-75 p-10" src='navbar-logo.png' alt='Lorem-Ipsum' />
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="username"
+                name="username"
+                type="text"
+                placeholder="Username"
+                onChange={onChange}
+                ref={usernameRef}
+            />
+            <br />
+            <input
+                class="shadow appearance-none border   rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Password"
+                onChange={onChange}
+                ref={passwordRef}
+            />
+
             <button className={styles.btnlogin} onClick={onClick}>Login</button>
             <a href='/signup'>need an account?</a>
+
+            <div className="text-3xl font-bold underline" />
+
         </div>
     );
 };

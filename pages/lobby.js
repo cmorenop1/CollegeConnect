@@ -1,11 +1,13 @@
 import HomeHeader from "../components/lobby/LobbyHeader";
-import styles from "../styles/Lobby.module.css"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Lobby() {
     return (
-
-        <div className={styles}>
+        <div>
+            <Navbar />
             <HomeHeader />
+            <Footer />
         </div>
     )
 }
