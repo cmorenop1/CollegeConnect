@@ -1,4 +1,5 @@
-import HomeHeader from "../components/lobby/LobbyHeader";
+import LobbyHeader from "../components/lobby/LobbyHeader";
+import LobbyContent from "../components/lobby/LobbyContent";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -6,7 +7,8 @@ export default function Lobby() {
     return (
         <div>
             <Navbar />
-            <HomeHeader />
+            <LobbyHeader />
+            <LobbyContent/>
             <Footer />
         </div>
     )
