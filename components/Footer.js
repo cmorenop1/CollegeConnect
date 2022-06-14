@@ -2,11 +2,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div class="absolute inset-x-0 bottom-0 h-16 ...">
-            <p class="text-center text-gray-500 text-xs">
-                &copy;2022 Kingdom Code 🍁 All rights reserved
-            </p>
-        </div>
+        <footer class="grid place-items-center fixed bottom-0">
+            &copy;2022 Kingdom Code 🍁 All rights reserved
+        </footer>
     );
 }
 
