@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import LoginForm from '../components/LoginForm'
-import Footer from '../components/Footer'
-import styles from '../styles/Home.module.css'
+import Footer from '../components/Footer' 
 
 export default function Home() {
   return (

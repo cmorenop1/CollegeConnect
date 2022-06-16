@@ -1,20 +1,30 @@
 import React from 'react';
+import Image from 'next/image'
+import Router from 'next/router'
+
 
 export default function () {
 
 
     const onClick = () => {
-        console.log('clic')
+        //alert('🍁 Praise the Lord, this works ✨')
+        const router = Router.push
+        router('/')
     }
 
     return (
-        <header className='flex px-2 items-center justify-between  bg-gray-900'>
-            <div class="py-2">
-                <img class="h-8" src='navbar-logo.png' alt='Lorem-Ipsum' />
+        <header className='sticky top-0 flex px-2 items-center justify-between  bg-gray-900'>
+            <div class="py-3 px-2">
+                <Image
+                    onClick={onClick}
+                    src="/navbar-logo.png"
+                    width="128"
+                    height="30"
+                />
             </div>
 
             <div>
-                <button type='button' class="block" >
+                <button type='button' class="block" onClick={onClick}>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         class="h-6 w-6 block text-gray-500 hover:text-white"
                         fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">

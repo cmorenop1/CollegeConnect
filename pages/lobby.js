@@ -1,8 +1,9 @@
-import LobbyHeader from "../components/lobby/LobbyHeader";
-import CardElement from "../components/lobby/CardElement";
-import Navbar from "../components/Navbar";
-// import LobbyCards from "../components/lobby/LobbyCards";
-// import Footer from "../components/Footer";
+import LobbyHeader from "../components/lobby/LobbyHeader"
+import CardElement from "../components/lobby/CardElement"
+import Navbar from "../components/Navbar"
+import CalendarElement from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
+
 
 export default function Lobby({ data }) {
     return (
@@ -10,11 +11,15 @@ export default function Lobby({ data }) {
             <Navbar />
             <LobbyHeader />
 
-            {data.map(e => {
-                return (
-                    <CardElement element={e} />
-                )
-            })}
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    {data.map(e => { return (<CardElement data={e} />) })}
+                </div>
+                <CalendarElement />
+            </div>
+
+
+
         </div>
     )
 }
