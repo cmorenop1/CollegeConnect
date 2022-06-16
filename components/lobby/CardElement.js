@@ -17,11 +17,9 @@ function CardElement({ data }) {
                 taught_by: data.taught_by,
                 course_section: data.course_section,
                 course_title: data.course_title,
-                
             },
         })
     }
-
 
     return (
         <div class="flex px-10 py-2">

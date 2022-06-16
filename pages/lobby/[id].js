@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import Navbar from "../../components/Navbar"
 import CourseHeader from "../../components/course/CourseHeader"
+import Tabs from "../../components/Tabs"
 
 export default function DynamicPage() {
 
@@ -12,7 +13,7 @@ export default function DynamicPage() {
             taught_by,
             course_section,
             course_title,
-           
+
         },
     } = router
 
@@ -21,17 +22,15 @@ export default function DynamicPage() {
         course_id,
         taught_by,
         course_section,
-        course_title,        
+        course_title,
     }
-
 
     return (
         <div>
             <Navbar />
             <CourseHeader data={data} />
-
-            <div>
-                content goes here for the course {course_id}
+            <div class="p-5">
+                <Tabs />
             </div>
         </div>
     )

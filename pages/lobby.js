@@ -18,8 +18,6 @@ export default function Lobby({ data }) {
                 <CalendarElement />
             </div>
 
-
-
         </div>
     )
 }

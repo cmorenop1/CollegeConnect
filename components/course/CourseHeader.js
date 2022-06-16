@@ -1,7 +1,15 @@
 import React from 'react';
+import Router from 'next/router'
+
 //icons → https://heroicons.com/
 
 const CourseHeader = ({ data }) => {
+
+    function goBack() {
+        const router = Router.push
+        router('/lobby')
+    }
+
     return (
         <div class="p-5" className="lg:flex lg:items-center lg:justify-between">
             <div className="flex-1 min-w-0">
@@ -30,8 +38,13 @@ const CourseHeader = ({ data }) => {
                         </svg>
                         {data.course_section}
                     </div>
-
                 </div>
+            </div>
+
+            <div class="p-10 hover:text-red-500" onClick={goBack} >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
             </div>
         </div>
     )
