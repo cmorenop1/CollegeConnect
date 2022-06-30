@@ -26,9 +26,9 @@ jobs:
         cache: 'yarn'
     - run: yarn install 
     - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
           
     - name: Automatic Versioning
       uses: nicupavel/action-files-version-increment@v3
