@@ -24,7 +24,7 @@ export default function Lobby({ data }) {
 
 // → getServerSideProps only work under the folder <pages> "
 export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:3001/courses`)
+    const res = await fetch(`http://localhost:4000/courses`)
     const data = await res.json()
     return { props: { data } }
 }
