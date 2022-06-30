@@ -11,6 +11,11 @@ export default function () {
         router('/')
     }
 
+    const onClickShowAlert = () => {
+        const alertMessage = `MyLMS Version v1.0.0`
+        alert(alertMessage)
+    }
+
     return (
         <header className='sticky top-0 flex px-2 items-center justify-between  bg-gray-900  align-middle'>
             <div class="py-3 px-2 align-middle">
@@ -25,7 +30,7 @@ export default function () {
             <div>
                 <span class="inline-grid grid-cols-2 gap-4 align-middle">
                     <span><IconAvatar /></span>
-                    <span><button type='button' onClick={onClick}>
+                    <span><button type='button' onClick={onClickShowAlert}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="align-middle h-6 w-6 block text-gray-500 hover:text-white"
                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
