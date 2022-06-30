@@ -4,10 +4,11 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ "main" ]
+  # push:
+  #   branches: [ "main" ]
   pull_request:
-    branches: [ "main, dev" ]
+    # branches: [ "main, dev" ]
+    branches: '*' # ← this means: ON EVERY PULL-REQUEST of ANY BRANCH
 
 jobs:
   quality:
@@ -26,5 +27,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm test
+    - run: npm install 
