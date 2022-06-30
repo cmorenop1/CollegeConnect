@@ -6,6 +6,13 @@ import 'react-calendar/dist/Calendar.css';
 
 
 export default function Lobby({ data }) {
+
+
+    data.data.map(e => {
+        console.log(e)
+    })
+
+
     return (
         <div>
             <Navbar />
@@ -13,7 +20,7 @@ export default function Lobby({ data }) {
 
             <div class="grid grid-cols-2 gap-4">
                 <div>
-                    {data.map(e => { return (<CardElement data={e} />) })}
+                    {data.data.map(e => { return (<CardElement data={e} />) })}
                 </div>
                 <CalendarElement />
             </div>
