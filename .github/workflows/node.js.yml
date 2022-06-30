@@ -27,8 +27,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-<<<<<<< HEAD
     - run: npm install 
-=======
-    - run: npm install 
->>>>>>> 660733589d0438c6aa9cad8a00fb60998e2e40a8
