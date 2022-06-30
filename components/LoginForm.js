@@ -34,7 +34,8 @@ const LoginForm = () => {
 
     return (
         <div className={styles.loginform}>
-            <img class="scale-75 p-10" src='navbar-logo.png' alt='Lorem-Ipsum' />
+            {/* <img class="scale-75 p-10" src='navbar-logo.png' alt='Lorem-Ipsum' /> */}
+            <img class="scale-75 p-10" src='mylms-bear.png' alt='Lorem-Ipsum' />
             <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="username"
