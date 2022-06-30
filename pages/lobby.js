@@ -7,10 +7,9 @@ import 'react-calendar/dist/Calendar.css';
 
 export default function Lobby({ data }) {
 
-
-    data.data.map(e => {
-        console.log(e)
-    })
+    // data.data.map(e => {
+    //     console.log(e)
+    // })
 
 
     return (
