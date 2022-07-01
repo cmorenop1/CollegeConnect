@@ -7,11 +7,7 @@ import 'react-calendar/dist/Calendar.css';
 
 export default function Lobby({ data }) {
 
-    // data.data.map(e => {
-    //     console.log(e)
-    // })
-
-
+ //this is a minor change
     return (
         <div>
             <Navbar />
