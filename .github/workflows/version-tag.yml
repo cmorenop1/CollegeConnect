@@ -14,3 +14,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: false
+        PRERELEASE_SUFFIX: ''
+        INITIAL_VERSION: 1.0.0
