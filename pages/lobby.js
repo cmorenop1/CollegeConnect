@@ -7,6 +7,7 @@ import 'react-calendar/dist/Calendar.css';
 export default function Lobby({ data }) {
 
     //this is a minor change
+    //THIS IS A MAYOR CHANGE
 
     return (
         <div>
