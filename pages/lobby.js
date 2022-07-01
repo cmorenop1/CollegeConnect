@@ -8,6 +8,7 @@ export default function Lobby({ data }) {
 
  //this is a minor change 2
  //this is my test change #minor
+ // I am going to make a PR from CU-02-MAYOR-CHANGE → dev in order to trigger the auto tag usin #major
     return (
         <div>
             <Navbar />
