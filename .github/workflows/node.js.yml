@@ -8,43 +8,16 @@ on:
     branches: '*' # ← this means: ON EVERY PULL-REQUEST of ANY BRANCH
 
 jobs:
-  quality:
-
+  Version-check:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
+    name: Bump-N-Tag Version
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@master
+    - name: Increment version
+      id: version   
+      uses: vinodhraj/Bump-N-Tag-Version@master
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
-    - run: yarn install 
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-          
-    - name: Automatic Versioning
-      uses: nicupavel/action-files-version-increment@v3
-    - name: Get the output time
-      run: echo "The time was ${{ steps.versioning_job.outputs.time }}"
-    - name: Get list of modified files
-      run: echo "Modified files ${{ steps.versioning_job.outputs.modified_files }}"
-    - id: commit_if_modified
-      name: Commit metadata file
-      if: steps.versioning_job.outputs.modified_files
-      run: |
-        git config --local user.email "cmorenop1@github.com"
-        git config --local user.name "cmorenop1"
-        git commit -am "Versioning for ${{ steps.versioning_job.outputs.modified_files }}"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_ACTOR }}
-        branch: ${{ github.head_ref }}
+        file_name: './VERSION'
+        tag_version: "true"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
