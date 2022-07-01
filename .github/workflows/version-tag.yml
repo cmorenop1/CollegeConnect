@@ -13,7 +13,7 @@ jobs:
       uses: anothrNick/github-tag-action@1.36.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: false
-        PRERELEASE_SUFFIX: ''
+        WITH_V: true
+        PRERELEASE_SUFFIX: '.'
         INITIAL_VERSION: 1.0.0
  
