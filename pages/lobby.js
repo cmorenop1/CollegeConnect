@@ -4,26 +4,19 @@ import Navbar from "../components/Navbar"
 import CalendarElement from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
 
-
 export default function Lobby({ data }) {
 
-    // data.data.map(e => {
-    //     console.log(e)
-    // })
-
-
+ //this is a minor change 2
     return (
         <div>
             <Navbar />
             <LobbyHeader />
-
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     {data.data.map(e => { return (<CardElement data={e} />) })}
                 </div>
                 <CalendarElement />
             </div>
-
         </div>
     )
 }
