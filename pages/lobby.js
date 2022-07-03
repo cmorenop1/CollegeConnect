@@ -10,6 +10,8 @@ export default function Lobby({ data }) {
         <div>
             <Navbar />
             <LobbyHeader />
+            <h1> APP VERSION {process.env.NEXT_PUBLIC_APP_VERSION}</h1>
+            <h1> THIS IS A MAYOR CHANGE</h1>
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     {data.data.map(e => { return (<CardElement data={e} />) })}
