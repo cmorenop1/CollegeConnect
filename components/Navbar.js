@@ -5,13 +5,14 @@ import IconAvatar from '../components/IconAvatar'
 
 
 export default function () {
+
     const onClick = () => {
         const router = Router.push
         router('/')
     }
 
     const onClickShowAlert = () => {
-        const alertMessage = `v1.1.1`
+        const alertMessage = `version ${process.env.APP_VERSION}`
         alert(alertMessage)
     }
 

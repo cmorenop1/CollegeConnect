@@ -23,12 +23,12 @@ const LoginForm = () => {
             username: usernameRef.current.value,
             password: passwordRef.current.value,
         }
-        console.log(fields)
+        // console.log(fields)
         setForm(fields)
     }
 
     const onClick = () => {
-        console.log(setForm)
+        // console.log(setForm)
         router.push('/lobby')
     }
 
