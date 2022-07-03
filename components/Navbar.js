@@ -12,7 +12,7 @@ export default function () {
     }
 
     const onClickShowAlert = () => {
-        const alertMessage = `MyLMS Version v1.0.0`
+        const alertMessage = `MyLMS Version v1.0.0 - #patch release`
         alert(alertMessage)
     }
 
