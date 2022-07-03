@@ -5,14 +5,15 @@ function exec(cmd, handler = function(error, stdout, stderr){console.log(stdout)
     const childfork = require('child_process');
     return childfork.exec(cmd, handler);
 }
-// exec('git describe --abbrev=0', function(err, stdout){console.log(stdout)});
+exec('git describe --abbrev=0', function(err, stdout){console.log(`running app version: ${stdout}`)});
 
 
 const nextConfig = {
   reactStrictMode: true,
   env: {
     // customKey: 'my-value',
-    APP_VERSION: exec('git describe --abbrev=0', function(err, stdout){console.log(stdout)}),
+    // APP_VERSION: exec('git describe --abbrev=0', function(err, stdout){console.log(stdout)}),
+    APP_VERSION:  'a value',
   },
 }
 

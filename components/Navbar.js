@@ -11,9 +11,9 @@ export default function () {
         router('/')
     }
 
-    //this is a #release-major
     const onClickShowAlert = () => {
         const alertMessage = `version ${process.env.APP_VERSION}`
+        console.log(process.env.APP_VERSION)
         alert(alertMessage)
     }
 
