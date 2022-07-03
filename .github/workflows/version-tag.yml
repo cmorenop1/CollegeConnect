@@ -8,11 +8,12 @@ name: Release creator
 #(MAJOR) git commit -m "this is a patch release #release-major" 
 
 on:
-  pull_request:
-    branches: [ "main" ] 
-# on:
-#   push:
-#     branches: [ master ]
+  # pull_request:
+  #   branches: [ "main" ] 
+on:
+  push:
+    # branches: [ master ]
+    branches: [ main ]
 jobs:
   manage_release_job:
     runs-on: ubuntu-latest
