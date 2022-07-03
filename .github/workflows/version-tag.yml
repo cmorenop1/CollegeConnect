@@ -1,18 +1,29 @@
-name: Version Tag #Mayor #Minor #Patch
+name: Release creator
+#docs: https://github.com/marketplace/actions/semver-release-manager
+# The action will parse the new commits since the last tag using pattern #release-{BumpType}
+
+#Example:
+#(PATCH) git commit -m "this is a patch release #release-patch" 
+#(MINOR) git commit -m "this is a patch release #release-minor" 
+#(MAJOR) git commit -m "this is a patch release #release-major" 
+
 on:
   pull_request:
-    branches: [ "dev" ] 
+    branches: [ "main" ] 
+# on:
+#   push:
+#     branches: [ master ]
 jobs:
-  build:
+  manage_release_job:
     runs-on: ubuntu-latest
+    name: Generate release
     steps:
-    - uses: actions/checkout@v2
+    - name: Generate release
+      id: release
+      uses: home-furnishing-nordic/semver-release-manager@master
       with:
-        fetch-depth: '0'
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@1.36.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        WITH_V: true
-        INITIAL_VERSION: 1.0.0
- 
+        # secret github token, required
+        github_token: "${{ secrets.GITHUB_TOKEN }}"
+    # Use the output from the `release` step
+    - name: Get the output time
+      run: echo "Execution time ${{ steps.release.outputs.time }}"
