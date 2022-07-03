@@ -5,7 +5,7 @@ import IconAvatar from '../components/IconAvatar'
 
 
 export default function () {
-
+    //this is an optimization :)
     const onClick = () => {
         const router = Router.push
         router('/')
