@@ -7,7 +7,7 @@ name: Release creator
 #(MINOR) git commit -m "this is a patch release #release-minor" 
 #(MAJOR) git commit -m "this is a patch release #release-major" 
 
-on:
+# on:
   # pull_request:
   #   branches: [ "main" ] 
 on:
