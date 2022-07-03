@@ -5,7 +5,7 @@ import IconAvatar from '../components/IconAvatar'
 
 
 export default function () {
-    //this is an optimization :)
+    //this is a #release-patch v1.0.1
     const onClick = () => {
         const router = Router.push
         router('/')
