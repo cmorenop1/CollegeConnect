@@ -12,9 +12,9 @@ export default function () {
     }
 
     const onClickShowAlert = () => {
-        const alertMessage = `version ${process.env.APP_VERSION}`
-        console.log(process.env.APP_VERSION)
-        alert(alertMessage)
+        // const alertMessage = `version ${process.env.APP_VERSION}`
+        // console.log(process.env.APP_VERSION)
+        // alert(alertMessage)
     }
 
     return (
