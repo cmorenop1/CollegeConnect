@@ -11,7 +11,7 @@ export default function () {
     }
 
     const onClickShowAlert = () => {
-        const alertMessage = `v1.1.0`
+        const alertMessage = `v1.1.1`
         alert(alertMessage)
     }
 
