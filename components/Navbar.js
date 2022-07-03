@@ -12,9 +12,8 @@ export default function () {
     }
 
     const onClickShowAlert = () => {
-        // const alertMessage = `version ${process.env.APP_VERSION}`
-        // console.log(process.env.APP_VERSION)
-        // alert(alertMessage)
+        const APP_VERSION =  process.env.NEXT_PUBLIC_VERSION || 'n/a'
+        alert(APP_VERSION)
     }
 
     return (
