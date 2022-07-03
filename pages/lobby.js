@@ -15,6 +15,7 @@ export default function Lobby({ data }) {
             <h1> APP VERSION {APP_VERSION}</h1>
             <h1> THIS IS A MAYOR CHANGE</h1>
             <h1> THIS IS A MAYOR CHANGE #2</h1>
+            <h1> THIS IS A MINOR CHANGE #3</h1>
             <div class="grid grid-cols-2 gap-4">
                 <div>
                     {data.data.map(e => { return (<CardElement data={e} />) })}
