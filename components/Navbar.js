@@ -5,14 +5,13 @@ import IconAvatar from '../components/IconAvatar'
 
 
 export default function () {
-    //this is a #release-patch v1.0.1
     const onClick = () => {
         const router = Router.push
         router('/')
     }
 
     const onClickShowAlert = () => {
-        const alertMessage = `MyLMS Version v1.0.0 - #patch release`
+        const alertMessage = `v1.0.0`
         alert(alertMessage)
     }
 
